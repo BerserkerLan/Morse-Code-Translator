@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_dark"
+    tools:context="com.multi.convert.morsecodetranslator.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/background_dark"
+            android:text="Normal Text :"
+            android:textColor="@color/White"
+            android:textSize="23dp"
+            tools:background="@android:color/background_dark" />
+
+        <Button
+            android:id="@+id/encode"
+            android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/clear1"
+            android:background="@android:color/background_dark"
+            android:onClick="encode"
+            android:text="Encode"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+
+        <Button
+            android:id="@+id/clear1"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/encode"
+            android:background="@android:color/background_dark"
+            android:onClick="clear1"
+            android:text="Clear"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+            />
+
+        <EditText
+            android:id="@+id/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_above="@+id/encode"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            tools:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/copyText"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/normalText"
+            android:layout_toRightOf="@+id/clear1"
+            android:background="@android:color/background_dark"
+            android:text="Copy"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" /><![CDATA[
+
+        />
+
+    ]]>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <Button
+            android:id="@+id/NW"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/copyMorse"
+            android:layout_toRightOf="@+id/clear2"
+            android:layout_toStartOf="@+id/copyMorse"
+            android:background="@android:color/background_dark"
+            android:onClick="newWord"
+            android:text="NW"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+
+        <Button
+            android:id="@+id/paste"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:text="Paste"
+            android:layout_above="@+id/dot"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/background_dark"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark"
+            />
+
+        <Button
+            android:id="@+id/backspace"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/paste"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:background="@android:color/background_dark"
+            android:onClick="backSpace"
+            android:text="B"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+
+
+        <Button
+            android:id="@+id/copyMorse"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/background_dark"
+            android:text="Copy"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+        />
+
+        <Button
+            android:id="@+id/NL"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:layout_alignBottom="@+id/morseText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/background_dark"
+            android:onClick="newLetter"
+            android:text="NL"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+        />
+
+        <Button
+            android:id="@+id/dash"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:layout_above="@+id/NL"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/background_dark"
+            android:onClick="addDash"
+            android:text="-"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+        />
+
+        <Button
+            android:id="@+id/dot"
+            android:layout_width="95dp"
+            android:layout_height="38dp"
+            android:layout_above="@+id/dash"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/background_dark"
+            android:onClick="addDot"
+            android:text="."
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+        />
+
+        <Button
+            android:id="@+id/clear2"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@android:color/background_dark"
+            android:onClick="clear2"
+            android:text="Clear"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/decode"
+            android:layout_toEndOf="@+id/decode" />
+        />
+
+        <Button
+            android:id="@+id/decode"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/clear2"
+            android:background="@android:color/background_dark"
+            android:onClick="decode"
+            android:text="Decode"
+            android:textColor="@color/White"
+            tools:background="@android:color/background_dark" />
+        />
+
+        <EditText
+            android:id="@+id/morseText"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:layout_above="@+id/decode"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:layout_toLeftOf="@+id/copyMorse"
+            android:layout_toStartOf="@+id/copyMorse"
+            android:background="@android:color/darker_gray"
+            android:clickable="true"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:textSize="27dp"
+            tools:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Morse Code :"
+            android:textColor="@color/White"
+            android:textSize="23dp"
+            tools:background="@android:color/background_dark" />
+    </RelativeLayout>
+</LinearLayout>
